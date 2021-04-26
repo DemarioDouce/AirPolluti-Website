@@ -4,4 +4,4 @@
 
 ## Screenshot
 
-## ![Mockup image.](/Mockups/SimpleDictionary.png)
+## ![Mockup image.](/Mockups/AirPolluti.png)
