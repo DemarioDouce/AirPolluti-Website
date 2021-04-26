@@ -6,6 +6,8 @@ import ButtonComponent from "./res/components/ButtonComponent";
 import "./res/css/AppStyle.css";
 // Image
 import EarthImage from "./res/images/EarthImage.png";
+//Load react-router-dom package
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
               <h1 className="header-text-top text-break fw-bold">
                 SAVE THE EARTH
               </h1>
-              <ButtonComponent text=" VIEW AIR POLLUTION" />
+              <Link to="/air-pollution" style={{ textDecoration: "none" }}>
+                <ButtonComponent text=" VIEW AIR POLLUTION" />
+              </Link>
             </div>
             {/* Image */}
             <div className="col-lg-6">
