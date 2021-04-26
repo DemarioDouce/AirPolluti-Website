@@ -11,10 +11,36 @@
 }
 
 .header-text-top {
-  font-size: 400%;
-  font-weight: "bold";
+  font-size: 250%;
   margin-top: 20%;
 }
 .image-top {
   height: 400px;
+}
+
+/* CSS classes middle section */
+.container-middle {
+  position: relative;
+  padding: 10%;
+  background-color: #fafbfe;
+}
+
+.card {
+  margin-bottom: 30px;
+  box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0px solid #eff2f7;
+  border-radius: 0.375rem;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1rem 3rem rgb(31 45 61 / 13%);
+  transition: all 0.2s ease;
 }
