@@ -5,23 +5,44 @@
 
 /* CSS classes top section */
 .container-top {
+  position: relative;
   background-color: #0d1118;
   padding: 10%;
   color: #ffffff;
 }
 
 .header-text-top {
-  font-size: 250%;
-  margin-top: 20%;
+  margin-top: 10%;
+  font-size: 400%;
+}
+
+.btn {
+  background-color: #238636;
+  color: #ffffff;
+  padding: 20px 20px;
+  font-size: 16px;
+  margin: 10px;
+  border: 1px solid #fff;
+  font-weight: 700;
+  border-radius: 8px;
+}
+.btn:hover {
+  background-color: #ffffff;
+  color: #238636;
+  border: 1px solid #238636;
+}
+
+.sub-text-top {
+  font-size: 350%;
 }
 .image-top {
-  height: 400px;
+  height: 500px;
 }
 
 /* CSS classes middle section */
 .container-middle {
   position: relative;
-  padding: 10%;
+  padding: 5%;
   background-color: #fafbfe;
 }
 
@@ -43,4 +64,11 @@
   transform: translateY(-10px);
   box-shadow: 0 1rem 3rem rgb(31 45 61 / 13%);
   transition: all 0.2s ease;
+}
+
+/* CSS classes footer section */
+.container-footer {
+  padding: 2%;
+  background-color: #0d1118;
+  color: #ffffff;
 }

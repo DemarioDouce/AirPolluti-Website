@@ -3,6 +3,8 @@ import "./res/css/AppStyle.css";
 // Image
 import EarthImage from "./res/images/EarthImage.png";
 function App() {
+  // Store current year
+  const currentYear = new Date().getFullYear();
   return (
     <>
       {/* Main container */}
@@ -12,7 +14,11 @@ function App() {
           <div className="row">
             {/* Header text */}
             <div className="col-lg-6">
-              <h1 className="header-text-top">SAVE THE EARTH GOT DAMMIT!</h1>
+              <h1 className="header-text-top">SAVE THE EARTH</h1>
+              <h1 className="sub-text-top">GOD DAMMIT!</h1>
+              <button type="button" className="btn">
+                VIEW AIR POLLUTION
+              </button>
             </div>
             {/* Image */}
             <div className="col-lg-6">
@@ -22,6 +28,8 @@ function App() {
         </section>
         {/* Middle section */}
         <section className="container-middle text-center">
+          <h1 className="px-4">PROTECTING OUR PLANET</h1>
+          <h1 className="px-4 pb-5">STARTS WITH YOU</h1>
           <div className="row">
             {/* First card */}
             <div className="col-lg-4 col-sm-6">
@@ -29,7 +37,7 @@ function App() {
                 <div className="px-4 py-5">
                   <i
                     className="fas fa-seedling fa-5x"
-                    style={{ color: "#66BB6A" }}
+                    style={{ color: "#238636" }}
                   ></i>
                 </div>
                 <div className="px-4 pb-5">
@@ -111,6 +119,12 @@ function App() {
               </div>
             </div>
           </div>
+        </section>
+        {/* Footer section */}
+        <section className="container-footer text-center">
+          <footer>
+            <p>Copyright© {currentYear} Demario Douce. All rights reserved.</p>
+          </footer>
         </section>
       </div>
     </>
