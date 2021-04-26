@@ -7,7 +7,7 @@ function CardComponent({ icon, color, title, description }) {
             <i className={icon} style={{ color: color }}></i>
           </div>
           <div className="px-4 pb-5">
-            <h5>{title}</h5>
+            <h5 className="fw-bold">{title}</h5>
             <p className="text-muted">{description}</p>
           </div>
         </div>
