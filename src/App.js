@@ -1,6 +1,7 @@
 //Component
 import CardComponent from "./res/components/CardComponent";
 import FooterComponent from "./res/components/FooterComponent";
+import ButtonComponent from "./res/components/ButtonComponent";
 // CSS
 import "./res/css/AppStyle.css";
 // Image
@@ -16,11 +17,10 @@ function App() {
           <div className="row">
             {/* Header text */}
             <div className="col-lg-6">
-              <h1 className="header-text-top text-break">SAVE THE EARTH</h1>
-              <h1 className="sub-text-top">GOD DAMMIT!</h1>
-              <button type="button" className="btn">
-                VIEW AIR POLLUTION
-              </button>
+              <h1 className="header-text-top text-break fw-bold">
+                SAVE THE EARTH
+              </h1>
+              <ButtonComponent text=" VIEW AIR POLLUTION" />
             </div>
             {/* Image */}
             <div className="col-lg-6">
@@ -30,8 +30,7 @@ function App() {
         </section>
         {/* Middle section */}
         <section className="container-middle text-center">
-          <h1 className="px-4">PROTECTING OUR PLANET</h1>
-          <h1 className="px-4 pb-5">STARTS WITH YOU</h1>
+          <h1 className="px-4 pb-5 fw-bold">PROTECT OUR PLANET</h1>
           <div className="row">
             {/* First card */}
             <CardComponent
