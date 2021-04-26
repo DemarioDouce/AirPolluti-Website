@@ -1,10 +1,12 @@
+//Component
+import CardComponent from "./res/components/CardComponent";
+import FooterComponent from "./res/components/FooterComponent";
 // CSS
 import "./res/css/AppStyle.css";
 // Image
 import EarthImage from "./res/images/EarthImage.png";
+
 function App() {
-  // Store current year
-  const currentYear = new Date().getFullYear();
   return (
     <>
       {/* Main container */}
@@ -14,7 +16,7 @@ function App() {
           <div className="row">
             {/* Header text */}
             <div className="col-lg-6">
-              <h1 className="header-text-top">SAVE THE EARTH</h1>
+              <h1 className="header-text-top text-break">SAVE THE EARTH</h1>
               <h1 className="sub-text-top">GOD DAMMIT!</h1>
               <button type="button" className="btn">
                 VIEW AIR POLLUTION
@@ -32,100 +34,51 @@ function App() {
           <h1 className="px-4 pb-5">STARTS WITH YOU</h1>
           <div className="row">
             {/* First card */}
-            <div className="col-lg-4 col-sm-6">
-              <div className="card">
-                <div className="px-4 py-5">
-                  <i
-                    className="fas fa-seedling fa-5x"
-                    style={{ color: "#238636" }}
-                  ></i>
-                </div>
-                <div className="px-4 pb-5">
-                  <h5>PLANT</h5>
-                  <p className="text-muted">Plant a tree.</p>
-                </div>
-              </div>
-            </div>
+            <CardComponent
+              icon="fas fa-seedling fa-5x"
+              color="#238636"
+              title="PLANT"
+              description="Plant a tree."
+            />
             {/* Second card */}
-            <div className="col-lg-4 col-sm-6">
-              <div className="card">
-                <div className="px-4 py-5">
-                  <i
-                    class="fas fa-recycle fa-5x"
-                    style={{ color: "#1E88E5" }}
-                  ></i>
-                </div>
-                <div className="px-4 pb-5">
-                  <h5>RECYCLE</h5>
-                  <p className="text-muted">Reduce, reuse, and recycle.</p>
-                </div>
-              </div>
-            </div>
+            <CardComponent
+              icon="fas fa-recycle fa-5x"
+              color="#1E88E5"
+              title="RECYCLE"
+              description="Reduce, reuse, and recycle."
+            />
             {/* Third card */}
-            <div className="col-lg-4 col-sm-6">
-              <div className="card">
-                <div className="px-4 py-5">
-                  <i
-                    class="fas fa-lightbulb fa-5x"
-                    style={{ color: "#FDD835" }}
-                  ></i>
-                </div>
-                <div className="px-4 pb-5">
-                  <h5>ENERGY</h5>
-                  <p className="text-muted">Use long-lasting light bulbs.</p>
-                </div>
-              </div>
-            </div>
+            <CardComponent
+              icon="fas fa-lightbulb fa-5x"
+              color="#FDD835"
+              title="ENERGY"
+              description="Use long-lasting light bulbs."
+            />
             {/* Fourth card */}
-            <div className="col-lg-4 col-sm-6">
-              <div className="card">
-                <div className="px-4 py-5">
-                  <i
-                    class="fas fa-shopping-basket fa-5x"
-                    style={{ color: "#00ACC1" }}
-                  ></i>
-                </div>
-                <div className="px-4 pb-5">
-                  <h5>SHOP</h5>
-                  <p className="text-muted">Shop wisely.</p>
-                </div>
-              </div>
-            </div>
+            <CardComponent
+              icon="fas fa-shopping-basket fa-5x"
+              color="#00ACC1"
+              title="SHOP"
+              description="Shop wisely."
+            />
             {/* Fifth card */}
-            <div className="col-lg-4 col-sm-6">
-              <div className="card">
-                <div className="px-4 py-5">
-                  <i class="fas fa-book fa-5x" style={{ color: "#6D4C41" }}></i>
-                </div>
-                <div className="px-4 pb-5">
-                  <h5>EDUCATE</h5>
-                  <p className="text-muted">Learn more.</p>
-                </div>
-              </div>
-            </div>
+            <CardComponent
+              icon="fas fa-book fa-5x"
+              color="#6D4C41"
+              title="EDUCATE"
+              description="Learn more."
+            />
             {/* Sixth card */}
-            <div className="col-lg-4 col-sm-6">
-              <div className="card">
-                <div className="px-4 py-5">
-                  <i
-                    class="fas fa-bicycle fa-5x"
-                    style={{ color: "#E53935" }}
-                  ></i>
-                </div>
-                <div className="px-4 pb-5">
-                  <h5>BIKE</h5>
-                  <p className="text-muted">Bike more. Drive less.</p>
-                </div>
-              </div>
-            </div>
+            <CardComponent
+              icon="fas fa-bicycle fa-5x"
+              color="#E53935"
+              title="BIKE"
+              description="Bike more. Drive less."
+            />
           </div>
         </section>
         {/* Footer section */}
-        <section className="container-footer text-center">
-          <footer>
-            <p>Copyright© {currentYear} Demario Douce. All rights reserved.</p>
-          </footer>
-        </section>
+        <FooterComponent />
       </div>
     </>
   );
