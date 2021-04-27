@@ -16,7 +16,7 @@ function App() {
       <div className="container-fluid">
         {/* Top section */}
         <section className="container-top text-center">
-          <div className="row">
+          <div className="row top-row">
             {/* Header text */}
             <div className="col-lg-6">
               <h1 className="header-text-top text-break fw-bold">

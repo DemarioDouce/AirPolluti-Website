@@ -11,6 +11,10 @@
   color: #ffffff;
 }
 
+.top-row {
+  align-items: center;
+}
+
 .header-text-top {
   margin-top: 10%;
   font-size: 400%;
@@ -34,8 +38,8 @@
 }
 
 .image-top {
-  height: 300px;
-  width: 300px;
+  height: 100%;
+  width: 70%;
 }
 
 /* CSS classes middle section */
