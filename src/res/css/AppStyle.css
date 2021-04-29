@@ -1,9 +1,12 @@
-/* CSS classes main */
+/* Elements */
+body {
+  background-color: #fafbfe;
+}
+/* Classes */
 .container-fluid {
   padding: 0%;
 }
 
-/* CSS classes top section */
 .container-top {
   position: relative;
   background-color: #0d1118;
@@ -22,7 +25,7 @@
 .btn {
   background-color: #238636;
   color: #ffffff;
-  padding: 10px 10px;
+  padding: 15px 15px;
   font-size: 16px;
   margin: 10px;
   border: 1px solid #fff;
@@ -41,11 +44,9 @@
   width: 70%;
 }
 
-/* CSS classes middle section */
 .container-middle {
   position: relative;
   padding: 5%;
-  background-color: #fafbfe;
 }
 
 .card {
@@ -68,9 +69,35 @@
   transition: all 0.2s ease;
 }
 
-/* CSS classes footer section */
 .container-footer {
   padding: 2%;
   background-color: #0d1118;
   color: #ffffff;
+}
+
+.container-user-input {
+  position: relative;
+  box-shadow: 0 1rem 3rem rgb(31 45 61 / 13%);
+  padding: 5%;
+  margin-top: -5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0px solid #eff2f7;
+  border-radius: 0.375rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px auto 0 auto;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0 rgb(31 45 61 / 13%);
+  border: 1px solid #238636;
 }
