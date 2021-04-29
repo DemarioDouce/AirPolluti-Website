@@ -76,7 +76,7 @@ function AirPollution() {
             <div className="row">
               <div className="col">
                 <input
-                  type="number"
+                  type="text"
                   className="form-control"
                   placeholder="Latitude"
                   aria-label="Latitude"
@@ -87,7 +87,7 @@ function AirPollution() {
               </div>
               <div className="col">
                 <input
-                  type="number"
+                  type="text"
                   className="form-control"
                   placeholder="Longitude"
                   aria-label="Longitude"
