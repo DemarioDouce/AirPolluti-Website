@@ -29,7 +29,7 @@ function AirPollution() {
     e.preventDefault();
     axios
       .get(
-        "http://api.openweathermap.org/data/2.5/air_pollution?lat=" +
+        "https://api.openweathermap.org/data/2.5/air_pollution?lat=" +
           latitude +
           "&lon=" +
           longitude +
