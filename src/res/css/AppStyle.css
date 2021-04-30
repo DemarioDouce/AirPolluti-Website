@@ -71,7 +71,7 @@ body {
 
 .row-cols-2 > * {
   flex: 0 0 auto;
-  width: 34%;
+  width: 580px;
 }
 
 .card-body {
