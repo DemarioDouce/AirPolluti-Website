@@ -21,7 +21,7 @@ function App() {
             <div className="col-lg-6">
               <h1 className="header-text-top fw-bold">SAVE THE EARTH</h1>
               <Link to="/air-pollution" style={{ textDecoration: "none" }}>
-                <ButtonComponent text=" VIEW AIR POLLUTION" />
+                <ButtonComponent text=" VIEW AIR POLLUTION" type="button" />
               </Link>
             </div>
             {/* Image */}

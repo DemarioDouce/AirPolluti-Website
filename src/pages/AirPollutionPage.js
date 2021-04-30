@@ -3,6 +3,7 @@ import React, { useState } from "react";
 //Component
 import FooterComponent from "../res/components/FooterComponent";
 import CardComponent from "../res/components/CardComponent";
+import ButtonComponent from "../res/components/ButtonComponent";
 //CSS
 import "../res/css/AppStyle.css";
 //Load react-router-dom package
@@ -97,22 +98,31 @@ function AirPollution() {
                 />
               </div>
             </div>
-            <button type="submit" className="btn">
-              SEARCH
-            </button>
+            <ButtonComponent text="SEARCH" type="submit" />
             <Link to="/" style={{ textDecoration: "none" }}>
-              <button type="button" className="btn">
-                GO BACK
-              </button>
+              <ButtonComponent text="GO BACK" type="button" />
             </Link>
           </form>
         </section>
+        <div className="text-center pt-5">
+          <p>
+            Don't know your latitude and longitude?{" "}
+            <a
+              href="https://www.latlong.net/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ textDecoration: "none", color: "#238636" }}
+            >
+              Check here.
+            </a>
+          </p>
+        </div>
         {/* Middle section */}
-        <section className="container-middle text-center">
+        <section className="container-middle text-center pt-5">
           <div className="d-flex justify-content-center">
             <CardComponent
-              icon="fas fa-cloud fa-5x"
-              color="#b2b2b2"
+              icon="fas fa-smog fa-5x"
+              color="#eeeeee"
               title="AIR QUALITY"
               description={airQuality}
             />

@@ -1,7 +1,7 @@
-function ButtonComponent({ text }) {
+function ButtonComponent({ text, type }) {
   return (
     <>
-      <button type="button" className="btn fw-bold">
+      <button type={type} className="btn fw-bold">
         {text}
       </button>
     </>
