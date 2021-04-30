@@ -129,7 +129,7 @@ function AirPollution() {
             />
           </div>
           {/* Row */}
-          <div className="row row-cols-2 pt-5 d-flex justify-content-center">
+          <div className="row pt-5 d-flex justify-content-center">
             <DataCardComponent
               color="#ef5350"
               title="Carbon monoxide"

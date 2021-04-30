@@ -1,7 +1,7 @@
 function DataCardComponent({ color, title, text }) {
   return (
     <>
-      <div className="col">
+      <div className="col-lg-6">
         <div className="card">
           <div className="card-body" style={{ backgroundColor: color }}>
             <h6 className="card-subtitle mb-2 data-text-color text-uppercase">

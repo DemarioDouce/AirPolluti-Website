@@ -19,7 +19,7 @@ body {
 }
 
 .header-text-top {
-  font-size: 350%;
+  font-size: 300%;
 }
 
 .btn {
@@ -67,11 +67,6 @@ body {
   transform: translateY(-10px);
   box-shadow: 0 1rem 3rem rgb(31 45 61 / 13%);
   transition: all 0.2s ease;
-}
-
-.row-cols-2 > * {
-  flex: 0 0 auto;
-  width: 580px;
 }
 
 .card-body {
