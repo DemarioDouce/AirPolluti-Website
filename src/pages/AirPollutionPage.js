@@ -1,7 +1,6 @@
 //React
 import React, { useState } from "react";
 //Component
-import FooterComponent from "../res/components/FooterComponent";
 import CardComponent from "../res/components/CardComponent";
 import ButtonComponent from "../res/components/ButtonComponent";
 import DataCardComponent from "../res/components/DataCardComponent";
@@ -25,6 +24,8 @@ function AirPollution() {
   const [fineParticlesMatter, setFineParticlesMatter] = useState("");
   const [coarseParticulateMatter, setCoarseParticulateMatter] = useState("");
   const [ammonia, setAmmonia] = useState("");
+  const [showLoading, setShowLoading] = useState(false);
+  const [showScreen, setShowScreen] = useState(false);
 
   //API call
   function submission(e) {
@@ -38,6 +39,10 @@ function AirPollution() {
           "&appid=5c5d6e30ba72c04e9d014b3a7c6c57af"
       )
       .then((result) => {
+        // Set showLoading
+        setShowLoading(false);
+        // Set showScreen
+        setShowScreen(true);
         if (result.data.list[0].main.aqi === 1) {
           setAirQuality("The air quality is good.");
         } else if (result.data.list[0].main.aqi === 2) {
@@ -60,7 +65,10 @@ function AirPollution() {
         setAmmonia(result.data.list[0].components.nh3);
       })
       .catch((error) => {
-        console.log(error);
+        // Set showLoading
+        setShowLoading(true);
+        // Set showScreen
+        setShowScreen(false);
       });
   }
 
@@ -120,51 +128,72 @@ function AirPollution() {
         </div>
         {/* Middle section */}
         <section className="container-middle text-center pt-5">
-          <div className="d-flex justify-content-center">
-            <CardComponent
-              icon="fas fa-smog fa-5x"
-              color="#eeeeee"
-              title="AIR QUALITY"
-              description={airQuality}
-            />
-          </div>
-          {/* Row */}
-          <div className="row pt-5 d-flex justify-content-center">
-            <DataCardComponent
-              color="#ef5350"
-              title="Carbon monoxide"
-              text={carbonMonoxide}
-            />
-            <DataCardComponent
-              color="#ec407a"
-              title="Nitrogen monoxide"
-              text={nitrogenMonoxide}
-            />
-            <DataCardComponent
-              color="#ab47bc"
-              title="Nitrogen dioxide"
-              text={nitrogenDioxide}
-            />
-            <DataCardComponent color="#7e57c2" title="Ozone" text={ozone} />
-            <DataCardComponent
-              color="#5c6bc0"
-              title="Sulphur dioxide"
-              text={sulphurDioxide}
-            />
-            <DataCardComponent
-              color="#d4e157"
-              title="Fine particles matter"
-              text={fineParticlesMatter}
-            />
-            <DataCardComponent
-              color="#29b6f6"
-              title="Coarse particulate matter"
-              text={coarseParticulateMatter}
-            />
-            <DataCardComponent color="#26c6da" title="Ammonia" text={ammonia} />
-          </div>
+          {showScreen ? (
+            <>
+              <div className="d-flex justify-content-center">
+                <CardComponent
+                  icon="fas fa-smog fa-5x"
+                  color="#eeeeee"
+                  title="AIR QUALITY"
+                  description={airQuality}
+                />
+              </div>
+              {/* Row */}
+              <div className="row pt-5 d-flex justify-content-center">
+                <DataCardComponent
+                  color="#ef5350"
+                  title="Carbon monoxide"
+                  text={carbonMonoxide}
+                />
+                <DataCardComponent
+                  color="#ec407a"
+                  title="Nitrogen monoxide"
+                  text={nitrogenMonoxide}
+                />
+                <DataCardComponent
+                  color="#ab47bc"
+                  title="Nitrogen dioxide"
+                  text={nitrogenDioxide}
+                />
+                <DataCardComponent color="#7e57c2" title="Ozone" text={ozone} />
+                <DataCardComponent
+                  color="#5c6bc0"
+                  title="Sulphur dioxide"
+                  text={sulphurDioxide}
+                />
+                <DataCardComponent
+                  color="#d4e157"
+                  title="Fine particles matter"
+                  text={fineParticlesMatter}
+                />
+                <DataCardComponent
+                  color="#29b6f6"
+                  title="Coarse particulate matter"
+                  text={coarseParticulateMatter}
+                />
+                <DataCardComponent
+                  color="#26c6da"
+                  title="Ammonia"
+                  text={ammonia}
+                />
+              </div>
+            </>
+          ) : (
+            <>
+              {showLoading && (
+                <>
+                  <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <p>
+                    There is an error, please check the coordinates and try
+                    again.
+                  </p>
+                </>
+              )}
+            </>
+          )}
         </section>
-        <FooterComponent />
       </div>
     </>
   );
