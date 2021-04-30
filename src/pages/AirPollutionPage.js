@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import FooterComponent from "../res/components/FooterComponent";
 import CardComponent from "../res/components/CardComponent";
 import ButtonComponent from "../res/components/ButtonComponent";
+import DataCardComponent from "../res/components/DataCardComponent";
 //CSS
 import "../res/css/AppStyle.css";
 //Load react-router-dom package
@@ -104,7 +105,7 @@ function AirPollution() {
             </Link>
           </form>
         </section>
-        <div className="text-center pt-5">
+        <div className="text-center pt-5 text-muted">
           <p>
             Don't know your latitude and longitude?{" "}
             <a
@@ -127,38 +128,41 @@ function AirPollution() {
               description={airQuality}
             />
           </div>
-          <p>
-            {carbonMonoxide} μg/m
-            <sup>3</sup>
-          </p>
-          <p>
-            {nitrogenMonoxide} μg/m
-            <sup>3</sup>
-          </p>
-          <p>
-            {nitrogenDioxide} μg/m
-            <sup>3</sup>
-          </p>
-          <p>
-            {ozone} μg/m
-            <sup>3</sup>
-          </p>
-          <p>
-            {sulphurDioxide} μg/m
-            <sup>3</sup>
-          </p>
-          <p>
-            {fineParticlesMatter} μg/m
-            <sup>3</sup>
-          </p>
-          <p>
-            {coarseParticulateMatter} μg/m
-            <sup>3</sup>
-          </p>
-          <p>
-            {ammonia} μg/m
-            <sup>3</sup>
-          </p>
+          {/* Row */}
+          <div className="row row-cols-2 pt-5 d-flex justify-content-center">
+            <DataCardComponent
+              color="#ef5350"
+              title="Carbon monoxide"
+              text={carbonMonoxide}
+            />
+            <DataCardComponent
+              color="#ec407a"
+              title="Nitrogen monoxide"
+              text={nitrogenMonoxide}
+            />
+            <DataCardComponent
+              color="#ab47bc"
+              title="Nitrogen dioxide"
+              text={nitrogenDioxide}
+            />
+            <DataCardComponent color="#7e57c2" title="Ozone" text={ozone} />
+            <DataCardComponent
+              color="#5c6bc0"
+              title="Sulphur dioxide"
+              text={sulphurDioxide}
+            />
+            <DataCardComponent
+              color="#d4e157"
+              title="Fine particles matter"
+              text={fineParticlesMatter}
+            />
+            <DataCardComponent
+              color="#29b6f6"
+              title="Coarse particulate matter"
+              text={coarseParticulateMatter}
+            />
+            <DataCardComponent color="#26c6da" title="Ammonia" text={ammonia} />
+          </div>
         </section>
         <FooterComponent />
       </div>

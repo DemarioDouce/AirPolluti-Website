@@ -69,6 +69,15 @@ body {
   transition: all 0.2s ease;
 }
 
+.row-cols-2 > * {
+  flex: 0 0 auto;
+  width: 34%;
+}
+
+.card-body {
+  color: #ffffff;
+}
+
 .container-footer {
   padding: 2%;
   background-color: #0d1118;
